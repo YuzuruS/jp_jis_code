@@ -28,7 +28,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry-byebug"
   spec.add_development_dependency "guard"
   spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'coveralls'
   spec.add_development_dependency 'simplecov'
   spec.add_development_dependency 'ffi', '1.9.18'
+  spec.add_development_dependency 'activerecord', '>= 3.2.0'
+  spec.add_development_dependency 'sqlite3'
+  spec.add_development_dependency 'coveralls'
+  spec.add_development_dependency 'appraisal'
 end

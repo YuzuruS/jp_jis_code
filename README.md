@@ -1,28 +1,51 @@
 # JpJisCode
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jp_jis_code`. To experiment with that code, run `bin/console` for an interactive prompt.
+全国地方公共団体コード(JIS地名コード)から都道府県、市区町村を変換するライブラリです。
 
-TODO: Delete this and the text above, and describe your gem
+参考: [全国地方公共団体コード](https://ja.wikipedia.org/wiki/全国地方公共団体コード)
 
-## Installation
+## インストール方法
 
-Add this line to your application's Gemfile:
+Gemfileに下記の行を追加してください。
 
 ```ruby
 gem 'jp_jis_code'
 ```
 
-And then execute:
+それから下記を実行してください。
 
     $ bundle
 
-Or install it yourself as:
+もしくは下記のようなコマンドでもインストールできます。
 
     $ gem install jp_jis_code
 
-## Usage
+## 使用方法
 
-TODO: Write usage instructions here
+市区町村コードには5桁のものと6桁のものがありますが、
+両方対応しています。
+
+```ruby
+code = JpJisCode::Code.find('011002')
+code.prefecture_name
+# => '北海道'
+code.prefecture_name_k
+# => 'ﾎｯｶｲﾄﾞｳ'
+code.city_name
+# => '札幌市'
+code.city_name_k
+# => 'ｻｯﾎﾟﾛｼ'
+
+code = JpJisCode::Code.find('01100')
+code.prefecture_name
+# => '北海道'
+code.prefecture_name_k
+# => 'ﾎｯｶｲﾄﾞｳ'
+code.city_name
+# => '札幌市'
+code.city_name_k
+# => 'ｻｯﾎﾟﾛｼ'
+```
 
 ## Development
 
