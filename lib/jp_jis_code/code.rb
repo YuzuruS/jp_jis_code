@@ -4,13 +4,13 @@ module JpJisCode
   class Code
     attr_accessor :code, :prefecture_name, :city_name, :prefecture_name_k, :city_name_k
 
-    def self.build(code, prefecture_name, city_name, prefecture_name_k, city_name_k)
+    def self.build(ret)
       city = self.new
-      city.code              = code
-      city.prefecture_name   = prefecture_name
-      city.city_name         = city_name
-      city.prefecture_name_k = prefecture_name_k
-      city.city_name_k       = city_name_k
+      city.code              = ret[:code]
+      city.prefecture_name   = ret[:prefecture_name]
+      city.city_name         = ret[:city_name]
+      city.prefecture_name_k = ret[:prefecture_name_k]
+      city.city_name_k       = ret[:city_name_k]
       city
     end
 
@@ -20,7 +20,7 @@ module JpJisCode
       ret = Mapping.data[n_code]
       return unless ret
 
-      build(ret[:code], ret[:prefecture_name], ret[:city_name], ret[:prefecture_name_k], ret[:city_name_k])
+      build(ret)
     end
 
     def self.normalized_code(code)
