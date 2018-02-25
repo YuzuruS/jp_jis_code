@@ -1,5 +1,11 @@
 # JpJisCode
 
+[![Gem Version](https://badge.fury.io/rb/jp_jis_code.svg)](https://badge.fury.io/rb/jp_jis_code)
+[![Build Status](https://travis-ci.org/YuzuruS/jp_jis_code.svg?branch=master)](https://travis-ci.org/YuzuruS/jp_jis_code)
+[![Maintainability](https://api.codeclimate.com/v1/badges/74f87eba9109855a15f1/maintainability)](https://codeclimate.com/github/YuzuruS/jp_jis_code/maintainability)
+[![Coverage Status](https://coveralls.io/repos/github/YuzuruS/jp_jis_code/badge.svg)](https://coveralls.io/github/YuzuruS/jp_jis_code)
+[![Dependency Status](https://beta.gemnasium.com/badges/github.com/YuzuruS/jp_jis_code.svg)](https://beta.gemnasium.com/projects/github.com/YuzuruS/jp_jis_code)
+
 全国地方公共団体コード(JIS地名コード)から都道府県、市区町村を変換するライブラリです。
 
 参考: [全国地方公共団体コード](https://ja.wikipedia.org/wiki/全国地方公共団体コード)
@@ -30,22 +36,25 @@ code = JpJisCode::Code.find('011002')
 code.prefecture_name
 # => '北海道'
 code.prefecture_name_k
-# => 'ﾎｯｶｲﾄﾞｳ'
+# => 'ほっかいどう'
 code.city_name
 # => '札幌市'
 code.city_name_k
-# => 'ｻｯﾎﾟﾛｼ'
+# => 'さっぽろし'
 
 code = JpJisCode::Code.find('01100')
 code.prefecture_name
 # => '北海道'
 code.prefecture_name_k
-# => 'ﾎｯｶｲﾄﾞｳ'
+# => 'ほっかいどう'
 code.city_name
 # => '札幌市'
 code.city_name_k
-# => 'ｻｯﾎﾟﾛｼ'
+# => 'さっぽろし'
 ```
+
+## TODO
+- [総務省の全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)のExcelから[jis_code.yml](https://github.com/YuzuruS/jp_jis_code/blob/master/data/jis_code.yml)を出力するスクリプト作成
 
 ## Development
 
