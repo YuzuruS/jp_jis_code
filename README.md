@@ -35,26 +35,23 @@ gem 'jp_jis_code'
 code = JpJisCode::Code.find('011002')
 code.prefecture_name
 # => '北海道'
-code.prefecture_name_k
+code.prefecture_name_h
 # => 'ほっかいどう'
 code.city_name
 # => '札幌市'
-code.city_name_k
+code.city_name_h
 # => 'さっぽろし'
 
 code = JpJisCode::Code.find('01100')
 code.prefecture_name
 # => '北海道'
-code.prefecture_name_k
+code.prefecture_name_h
 # => 'ほっかいどう'
 code.city_name
 # => '札幌市'
-code.city_name_k
+code.city_name_h
 # => 'さっぽろし'
 ```
-
-## TODO
-- [総務省の全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)のExcelから[jis_code.yml](https://github.com/YuzuruS/jp_jis_code/blob/master/data/jis_code.yml)を出力するスクリプト作成
 
 ## Development
 

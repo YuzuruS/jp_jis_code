@@ -2,15 +2,15 @@ require "jp_jis_code/mapping"
 
 module JpJisCode
   class Code
-    attr_accessor :code, :prefecture_name, :city_name, :prefecture_name_k, :city_name_k
+    attr_accessor :code, :prefecture_name, :city_name, :prefecture_name_h, :city_name_h
 
     def self.build(ret)
       city = self.new
       city.code              = ret[:code]
       city.prefecture_name   = ret[:prefecture_name]
       city.city_name         = ret[:city_name]
-      city.prefecture_name_k = ret[:prefecture_name_k]
-      city.city_name_k       = ret[:city_name_k]
+      city.prefecture_name_h = ret[:prefecture_name_h]
+      city.city_name_h       = ret[:city_name_h]
       city
     end
 
