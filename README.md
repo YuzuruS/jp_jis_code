@@ -6,7 +6,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/YuzuruS/jp_jis_code/badge.svg)](https://coveralls.io/github/YuzuruS/jp_jis_code)
 [![Dependency Status](https://beta.gemnasium.com/badges/github.com/YuzuruS/jp_jis_code.svg)](https://beta.gemnasium.com/projects/github.com/YuzuruS/jp_jis_code)
 
-全国地方公共団体コード(JIS地名コード、地方自治体コード、都道府県コード、市町村コードなどと呼ばれることもある。)から都道府県、市区町村を変換するライブラリです。
+全国地方公共団体コード(JIS地名コード、地方自治体コード、都道府県コード、市町村コードなどと呼ばれることもある。)から都道府県、市区町村を取得するライブラリです。
 
 参考: [全国地方公共団体コード](https://ja.wikipedia.org/wiki/全国地方公共団体コード)
 
