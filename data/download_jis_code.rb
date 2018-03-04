@@ -39,7 +39,7 @@ reader.pages.each do |page|
           city_name_h: NKF.nkf("--hiragana -w", line[2])
         }
       end
-    else line.length == 5
+    elsif line.length == 5
       yml[line[0]] = {
         code: line[0],
         prefecture_name: line[1],
