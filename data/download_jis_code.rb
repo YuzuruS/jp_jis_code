@@ -4,7 +4,7 @@ require 'jp_prefecture'
 require "nkf"
 require 'yaml'
 
-#総務省のpdfをパースする
+#総務省のpdfをパースする(平成28年10月10日現在)
 url = 'http://www.soumu.go.jp/main_content/000442938.pdf'
 
 io = open(url)
